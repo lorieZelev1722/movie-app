@@ -35,7 +35,7 @@ function Modal(props: Props) {
   const [selectedMovie, setSelectedMovie] = useState<MovieInfo | null>(null);
 
   // Log props to inspect the structure
-  console.log(props.movieInfo);
+  // console.log(props.movieInfo);
 
   useEffect(() => {
     // Ensure movieInfo is always treated as an array

@@ -21,7 +21,7 @@ const Content = (props:Props) => {
 
 const [movieInfoData, setMovieInfoData] = useState([]);
 const [imdbID, setImdbID] = useState<string | undefined>(undefined);
-console.log(imdbID);
+// console.log(imdbID);
 
 
   const onClickMovieInfo = (e:MouseEvent<HTMLAnchorElement>) =>{
