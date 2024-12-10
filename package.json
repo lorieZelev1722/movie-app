@@ -1,10 +1,13 @@
 {
+  "homepage": "https://loriezelev1722.github.io/movie-app/",
   "name": "movie-app",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
