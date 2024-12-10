@@ -31,7 +31,7 @@ const [imdbID, setImdbID] = useState<string | undefined>(undefined);
  
   const fetchMovieInfo = () =>{ // Fetch the data from OMDb API
     if(imdbID){
-    const apiURL = `http://www.omdbapi.com/?i=${imdbID}&apikey=c30817fb`;
+    const apiURL = `https://www.omdbapi.com/?i=${imdbID}&apikey=c30817fb`;
 
     fetch(apiURL)
     .then((response) => response.json())

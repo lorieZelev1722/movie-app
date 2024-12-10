@@ -12,7 +12,7 @@ function App(){
 
  // Function to fetch movie data
  const retrieveMovieAPI = () => {
-  const apiURL = `http://www.omdbapi.com/?s=${searchMovie || searchMovieGenre || 'all'}&apikey=c30817fb`
+  const apiURL = `https://www.omdbapi.com/?s=${searchMovie || searchMovieGenre || 'all'}&apikey=c30817fb`
   
   // Fetch the data from OMDb API
   fetch(apiURL)
