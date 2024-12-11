@@ -2,6 +2,7 @@ import SearchFilter from "./SearchFilter"
 import MovieList from "./MovieList";
 import Modal from"./Modal";
 import { useState,useEffect,MouseEvent} from "react";
+import TotalText from "./TotalText";
 
 interface Movie {
   Title: string;
@@ -17,11 +18,13 @@ interface Props{
 }
 
 
+
 const Content = (props:Props) => {
 
 const [movieInfoData, setMovieInfoData] = useState([]);
 const [imdbID, setImdbID] = useState<string | undefined>(undefined);
 // console.log(imdbID);
+
 
 
   const onClickMovieInfo = (e:MouseEvent<HTMLAnchorElement>) =>{
@@ -63,6 +66,7 @@ const [imdbID, setImdbID] = useState<string | undefined>(undefined);
   return (
     <div className="container-lg">
     <SearchFilter onChangeEvent={props.onChangeEvent}></SearchFilter>
+    <TotalText totalResult={props.movieList.length.toString()}></TotalText>
     <MovieList movieList={props.movieList} onClickMovieInfo={onClickMovieInfo}></MovieList>
     <Modal movieInfo={movieInfoData}></Modal>
     </div>
