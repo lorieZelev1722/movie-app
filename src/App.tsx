@@ -10,6 +10,7 @@ function App(){
   const [searchMovieGenre,setSearchMovieGenre] = useState("");
   const [movieListData, setMovieListData] = useState([]);
 
+
  // Function to fetch movie data
  const retrieveMovieAPI = () => {
   const apiURL = `https://www.omdbapi.com/?s=${searchMovie || searchMovieGenre || 'all'}&apikey=c30817fb`
@@ -42,12 +43,14 @@ function App(){
     const input = event.currentTarget.previousElementSibling as HTMLInputElement;
     if (input) {
       setSearchMovie(input.value);
+      setSearchMovieGenre("");
     }
     console.log(input.value);
   };
 
   const changeEventInSearchFilter = (event: React.ChangeEvent<HTMLSelectElement>) =>{
         setSearchMovieGenre(event.target.value);
+        setSearchMovie("");
         
   };
 
